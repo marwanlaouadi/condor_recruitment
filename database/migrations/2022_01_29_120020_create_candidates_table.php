@@ -22,7 +22,7 @@ class CreateCandidatesTable extends Migration
             $table->foreignId('education_id')->nullable()->constrained('education')->cascadeOnDelete();
             $table->foreignId('nationality_id')->nullable()->constrained()->cascadeOnDelete();
             $table->string('title')->nullable();
-            $table->enum('gender', ['male', 'female', 'other'])->nullable();
+            $table->enum('gender', ['male', 'female'])->nullable();
             $table->string('website')->nullable();
             $table->string('photo')->nullable();
             $table->string('cv')->nullable();
